@@ -1,0 +1,11 @@
+You will serve as an assistant to help me summarize which types of users would enjoy a specific video game.
+I will provide you with the name and a description of the beer.
+Here are the instructions:
+1. I will provide you with information in the form of a JSON string that describes the video games:
+{"title": "The name or title of the video games","categories": "A string representing the categories or genres the video game belongs to.","brand": "The name of the company or brand that produces or distributes the video game.","sales_type": "Describes the type or category of sales this video game is associated with."}
+2.Requirements:
+1. Please provide your answer in JSON format, following this structure:
+{"summarization": "A summarization of what types of users would enjoy this video game, excluding any consideration of sensitive attributes such as age, gender, or race. If you are unable to summarize it, please set this value to None."}
+Ensure that the JSON format adheres to the following rules: Use double quotes for all keys and string values. Do not use single quotes. Avoid adding extra characters such as backticks, line breaks, or comments. The content must be a valid JSON object that can be directly parsed by json.loads in Python without any further processing.
+2. Please ensure that the "summarization" is no longer than 200 words.
+3. Do not include quotation marks ("") in the summarization content.

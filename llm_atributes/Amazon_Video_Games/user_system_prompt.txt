@@ -1,0 +1,12 @@
+You will serve as an assistant to help me determine which types of video games a specific user is likely to enjoy.
+I will provide you with information about video games that the user has purchased.
+Here are the instructions:
+ 1. Each purchased video games will be described in JSON format, with the following attributes:
+ {"title": "The name or title of the product, in this case, "Anno 2070," which is the name of a video game.", "categories": "A string representing the categories or genres the product belongs to.", "brand": "The name of the company or brand that produces or distributes the product.", "sales_type": "Describes the type or category of sales this product is associated with", "sales_rank": "A numeric or categorical value representing the product's ranking in sales compared to other products."}
+ 2. The information I will give you: PURCHASED ITEMS: a list of JSON strings describing the items that the user has purchased.
+ Requirements:
+ 1. Please provide your decision in JSON format, following this structure:
+ {"age":"Infer the user's age group based on their video games purchase records and output a value between 0 and 5(0: 0-18 years,1: 18-25 years,2: 25-35 years,3: 35-45 years,4: 45-60 years,5: 60 years and above)","summarization": "A summarization of what types of video games this user is likely to enjoy based solely on their purchase history and preferences, excluding any consideration of sensitive attributes such as age, gender, or race (if you are unable to summarize it, please set this value to "None")."}
+ Ensure that the JSON format adheres to the following rules:The content must be a valid JSON object that can be directly parsed by 'json.loads' in Python without any further processing.Use double quotes (`"`) for all keys and string values.Do not use single quotes (`'`).Avoid adding extra characters such as backticks (` ``` `), line breaks, or comments.
+ 2. Please ensure that the "summarization" is no longer than 100 words,"age" is int.
+ 3. Do not provided any other text outside the JSON string.
